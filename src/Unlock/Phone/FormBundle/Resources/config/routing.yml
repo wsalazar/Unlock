@@ -1,0 +1,3 @@
+unlock_phone_form_homepage:
+    pattern:  /
+    defaults: { _controller: UnlockPhoneFormBundle:Unlock:unlock }

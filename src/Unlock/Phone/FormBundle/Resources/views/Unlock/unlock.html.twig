@@ -1,0 +1,43 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    <form action="{{ path('unlock_phone_form_homepage') }}" method="post" {{ form_enctype(form) }} class="unlock">
+
+        {{ form_errors(form) }}
+
+        {{ form_row(form.imie) }}
+        {{ form_row(form.firstName) }}
+        {{ form_row(form.lastName) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.phone) }}
+        {{ form_row(form.address) }}
+        {{ form_row(form.account_type) }}
+        {{ form_row(form.creditCardNum) }}
+        {{ form_row(form.nameOnCreditCard) }}
+        {{ form_row(form.monthExpired) }}
+        {{ form_row(form.yearExpired) }}
+        {{ form_row(form.cvv) }}
+
+
+        {{ form_rest(form) }}
+        <br />
+        <input type="submit" value="Email my Unlock Code" />
+    </form>
+    {# endblock #}
+
+    {# block javascripts #}
+    <!--<script type="text/javascript" src="{{ asset('js/paypal-button.js') }}"></script>
+<script data-env="sandbox"
+    data-callback="http://unlock.lcl/app_dev.php/unlock"
+    data-tax="3.50"
+    data-shipping=".75"
+    data-currency="USA"
+    data-amount="5"
+    data-quantity="1"
+    data-name="Unlock"
+    data-button="emailmyunlockcode" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=will.a.salazar@gmail.com"
+></script>-->
+{% endblock %}
+
+
