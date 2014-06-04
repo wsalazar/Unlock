@@ -15,6 +15,15 @@ class UnlockController extends Controller
         $request = $this->getRequest();
         if( $request->getMethod() == 'POST'){
             $form->bind($request);
+            $paypal = $this->get('paypal');
+            $accessToken = $paypal->
+                                    getApiContext()->
+                                    getCredential()->
+                                    getAccessToken($paypal->
+                                                            getApiContext()->
+                                                            getConfig()
+                                                   );
+
         }
         return $this->render('UnlockPhoneFormBundle:Unlock:unlock.html.twig', array(
             //'name' => $name,

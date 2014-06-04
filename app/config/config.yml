@@ -1,6 +1,8 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: config_constants.php }
+    - { resource: paypal.yml }
 
 framework:
     #esi:             ~
